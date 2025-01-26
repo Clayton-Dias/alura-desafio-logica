@@ -1,0 +1,168 @@
+/* Aplica o box-sizing para incluir bordas e padding no tamanho dos elementos e remove margens/padding padrões */
+* {
+    box-sizing: border-box; /* Inclui bordas e padding no tamanho total do elemento */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    color: white; /* Define a cor do texto como branco para todos os elementos */
+}
+
+/* Estiliza o body com um gradiente de fundo, centraliza o conteúdo e define altura */
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    /* Gradiente de fundo que vai do azul ao quase preto */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+}
+
+/* Adiciona uma imagem de fundo semi-transparente ao body */
+body::before {
+    background-image: url("img/code.png"); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: right; /* Posiciona a imagem à direita */
+    content: ""; /* Necessário para aplicar o pseudo-elemento */
+    display: block; /* Torna visível */
+    position: absolute; /* Posiciona sobre o body */
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    opacity: 0.4; /* Torna a imagem semi-transparente */
+}
+
+/* Estiliza o contêiner principal */
+.container {
+    width: 80%; /* Define a largura como 80% da tela */
+    min-height: 50vh; /* Define uma altura mínima */
+    display: flex; /* Usa flexbox para organizar os filhos */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça os filhos uniformemente */
+    border-radius: 24px; /* Bordas arredondadas */
+    border: 1px solid #1875E8; /* Borda azul */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Sombra suave */
+    background-image: url("img/Ruido.png"); /* Imagem de fundo */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o contêiner */
+    position: relative; /* Necessário para o overflow funcionar */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do contêiner */
+}
+
+/* Define a área de conteúdo do contêiner */
+.container__conteudo {
+    display: flex; /* Flexbox para organizar elementos internos */
+    align-items: center; /* Alinha os elementos verticalmente */
+    position: relative; /* Permite uso de pseudo-elementos ou posicionamento absoluto */
+    width: 100%; /* Ocupa toda a largura do contêiner */
+}
+
+/* Estiliza a seção de informações */
+.container__informacoes {
+    flex: 1; /* Faz o contêiner de informações ocupar o máximo de espaço disponível */
+    padding: 3rem; /* Adiciona espaçamento interno */
+}
+
+/* Estiliza o texto dentro do contêiner */
+.container__texto {
+    margin: 12px 0; /* Espaçamento entre os textos */
+    display: flex; /* Organiza os elementos de texto em um bloco flexível */
+    flex-direction: column; /* Alinha os elementos em coluna */
+}
+
+/* Define a cor azul para um texto destacado */
+.container__texto-azul {
+    color: #1875E8; /* Texto azul */
+    display: block; /* Mantém o elemento como um bloco */
+}
+
+/* Estiliza os campos de entrada e rótulos */
+.container__campo {
+    display: flex; /* Flexbox para alinhar os rótulos e entradas */
+    align-items: center; /* Alinha verticalmente os elementos */
+    justify-content: space-between; /* Espaça uniformemente os elementos */
+    margin-bottom: 12px; /* Espaçamento inferior entre os campos */
+}
+
+/* Define o estilo do input (campo de entrada) */
+.container__input {
+    width: 130px; /* Largura fixa do campo */
+    height: 72px; /* Altura fixa do campo */
+    border-radius: 16px; /* Bordas arredondadas */
+    background-color: #FFF; /* Fundo branco */
+    border: none; /* Remove a borda padrão */
+    color: #1875E8; /* Texto azul */
+    padding: 2rem; /* Espaçamento interno */
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: 700; /* Negrito */
+    font-family: 'Inter', sans-serif; /* Fonte personalizada */
+}
+
+/* Define o layout para os botões */
+.container__botoes {
+    display: flex; /* Flexbox para alinhar os botões */
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    gap: 1em; /* Espaçamento entre os botões */
+}
+
+/* Estiliza botões padrão */
+.container__botao {
+    border-radius: 16px; /* Bordas arredondadas */
+    background: #1875E8; /* Fundo azul */
+    padding: 16px 24px; /* Espaçamento interno */
+    font-size: 24px; /* Tamanho do texto */
+    width: 100%; /* Ocupa toda a largura disponível */
+    font-weight: 700; /* Negrito */
+    border: none; /* Remove bordas padrão */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+}
+
+/* Estiliza botões desabilitados */
+.container__botao-desabilitado {
+    border-radius: 16px;
+    background: #6f6f70; /* Fundo cinza */
+    padding: 16px 24px;
+    font-size: 24px;
+    width: 100%;
+    font-weight: 700;
+    border: none;
+    cursor: not-allowed; /* Mostra que o botão não é clicável */
+}
+
+/* Estiliza o título principal */
+h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Fonte personalizada */
+    font-size: 72px; /* Tamanho grande do texto */
+    font-weight: 700; /* Negrito */
+    line-height: 100%; /* Altura da linha igual ao texto */
+    padding: 2rem; /* Espaçamento ao redor */
+}
+
+/* Define o estilo de parágrafos */
+.texto__paragrafo {
+    color: #FFF; /* Texto branco */
+    font-family: 'Inter'; /* Fonte personalizada */
+    font-size: 32px; /* Tamanho do texto */
+    font-style: normal;
+    font-weight: 400; /* Peso padrão */
+    line-height: normal;
+}
+
+/* Estiliza imagens de pessoas */
+.container__imagem-pessoa {
+    max-width: 100%; /* Adapta a largura da imagem ao contêiner */
+    height: auto; /* Mantém as proporções originais */
+    margin-top: 2rem; /* Adiciona espaçamento superior */
+}
+
+/* Estilo para botões desabilitados */
+button:disabled {
+    background-color: gray;
+}
+
+/* Regras para telas menores (responsividade) */
+@media screen and (max-width: 1250px) {
+    .container__imagem-pessoa {
+        display: none; /* Esconde imagens em telas menores */
+    }
+
+    h1 {
+        font-size: 50px; /* Diminui o tamanho do título */
+    }
+}

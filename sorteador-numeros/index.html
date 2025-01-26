@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Define o tipo de documento HTML e especifica o idioma do conteúdo como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres utilizado na página como UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva, ajustando-se para dispositivos móveis -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconexões para carregar fontes mais rapidamente -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importa as fontes "Chakra Petch" e "Inter" do Google Fonts -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo de estilos CSS externo -->
+
+    <title>Sorteador de números</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Div principal que encapsula todo o conteúdo -->
+
+        <div class="container__conteudo">
+            <!-- Div para agrupar o conteúdo principal -->
+
+            <div class="container__informacoes">
+                <!-- Div que contém os elementos de entrada e botões -->
+
+                <div class="container__texto">
+                    <!-- Div para o título da página -->
+                    <h1>Sorteador<span class="container__texto-azul"> de números</span></h1>
+                    <!-- Título principal com um destaque estilizado para "de números" -->
+                </div>
+
+                <div class="container__campo">
+                    <!-- Campo de entrada para a quantidade de números -->
+                    <label class="texto__paragrafo">Quantidade de números</label>
+                    <input class="container__input" id="quantidade" type="number" min="1">
+                </div>
+
+                <div class="container__campo">
+                    <!-- Campo de entrada para o valor inicial -->
+                    <label class="texto__paragrafo">Do número</label>
+                    <input class="container__input" id="de" type="number" min="1">
+                </div>
+
+                <div class="container__campo">
+                    <!-- Campo de entrada para o valor final -->
+                    <label class="texto__paragrafo">Até o número</label>
+                    <input class="container__input" id="ate" type="number" min="1">
+                </div>
+
+                <div class="chute container__botoes">
+                    <!-- Botões para as ações -->
+                    <button onclick="sortear()" id="btn-sortear" class="container__botao">Sortear</button>
+                    <!-- Botão para acionar a função de sorteio -->
+
+                    <button onclick="reiniciar()" id="btn-reiniciar" class="container__botao-desabilitado">Reiniciar</button>
+                    <!-- Botão para reiniciar o sorteio -->
+                </div>
+
+                <div class="container__texto" id="resultado">
+                    <!-- Div para exibir o resultado do sorteio -->
+                    <label class="texto__paragrafo">Números sorteados: nenhum até agora</label>
+                </div>
+            </div>
+
+            <img src="./img/ia.png" alt="Uma pessoa com capacete de astronauta" class="container__imagem-pessoa" />
+            <!-- Imagem ilustrativa com descrição alternativa -->
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+    <!-- Importa o arquivo JavaScript com a propriedade "defer" para carregá-lo após o HTML -->
+</body>
+
+</html>
