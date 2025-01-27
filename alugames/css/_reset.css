@@ -1,0 +1,30 @@
+/* Aplica as seguintes regras a todos os elementos da página */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    border: 0; /* Remove a borda padrão de todos os elementos */
+    box-sizing: border-box; /* Define que o tamanho dos elementos inclui o padding e a borda */
+}
+
+/* Estiliza listas não ordenadas (ul) */
+ul {
+    list-style: none; /* Remove o estilo de lista (como os marcadores) das listas */
+    margin-block: 0; /* Remove a margem superior e inferior da lista */
+    padding-inline: 0; /* Remove o preenchimento à esquerda e à direita da lista */
+}
+
+/* Estiliza links */
+a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: inherit; /* Faz com que a cor do link seja herdada do seu elemento pai */
+}
+
+/* Estiliza links visitados */
+a:visited {
+    color: inherit; /* Mantém a cor do link visitado igual à cor herdada */
+}
+
+/* Estiliza imagens */
+img {
+    display: block; /* Faz com que as imagens sejam exibidas como blocos (elimina o espaço embaixo das imagens) */
+}
+

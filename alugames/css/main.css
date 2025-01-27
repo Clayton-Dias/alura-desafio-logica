@@ -1,0 +1,157 @@
+/* Importa o arquivo _reset.css para garantir que o estilo básico seja resetado */
+@import url(_reset.css);
+
+/* Importa fontes do Google Fonts, Chakra Petch e Inter, com diferentes pesos */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@600;700&display=swap');
+
+/* Estiliza o elemento body */
+.body {
+    color: #FFFFFF; /* Define a cor do texto como branco */
+
+    min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da tela */
+
+    background: rgb(0, 0, 0); /* Define a cor de fundo como preto */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(1, 8, 14, 1) 25%, rgba(80, 94, 255, 0.85) 50%, rgba(1, 8, 14, 1) 75%, rgba(0, 0, 0, 1) 100%); /* Define um gradiente de fundo com várias cores */
+    background-repeat: no-repeat; /* Evita que o fundo se repita */
+    background-attachment: fixed; /* Faz com que o fundo fique fixo enquanto o conteúdo rola */
+
+    display: flex; /* Utiliza Flexbox para organizar o layout */
+    flex-direction: column; /* Organiza os itens no layout de forma vertical */
+    justify-content: center; /* Centraliza os itens verticalmente */
+
+    padding: 2rem; /* Adiciona um padding de 2rem ao redor do conteúdo */
+}
+
+/* Regras para telas com largura mínima de 1440px */
+@media screen and (min-width: 1440px) {
+    .body {
+        padding: 2rem calc((100vw - 1086px)/2); /* Ajusta o padding lateral para centralizar o conteúdo */
+    }
+}
+
+/* Estiliza o contêiner principal */
+.main {
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Organiza os itens no layout de forma vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estiliza a linha divisória */
+.divisor {
+    display: flex; /* Utiliza Flexbox */
+    gap: 53px; /* Define o espaço entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+
+    margin: 88px 0px 40px; /* Adiciona margens superior e inferior */
+}
+
+/* Estiliza as linhas do divisor */
+.divisor__line {
+    height: 1px; /* Define a altura da linha como 1px */
+    width: 282px; /* Define a largura da linha */
+    background-color: #00F4BF; /* Define a cor da linha */
+}
+
+/* Estiliza o título da página */
+.page-title {
+    font-family: 'Chakra Petch', sans-serif; /* Define a fonte do título */
+    font-weight: 700; /* Define o peso da fonte como 700 (negrito) */
+    font-size: 5rem; /* Define o tamanho da fonte */
+    
+    margin-bottom: 2.5rem; /* Adiciona uma margem inferior */
+}
+
+/* Estiliza a ênfase no título */
+.page-title__emphasis {
+    color: #505EFF; /* Define a cor da ênfase como azul */
+}
+
+/* Estiliza o painel de jogos */
+.dashboard {
+    background-color: rgba(255, 255, 255, 0.1); /* Define um fundo transparente com cor branca */
+    
+    border-radius: 2rem; /* Define bordas arredondadas */
+    border-width: 1px; /* Define a espessura da borda */
+    border-style: solid; /* Define o estilo da borda como sólido */
+    border-color: #00F4BF; /* Define a cor da borda */
+    
+    padding: 3rem; /* Adiciona padding dentro do painel */
+    width: 100%; /* Define a largura como 100% */
+}
+
+/* Estiliza os itens do painel de jogos */
+.dashboard__items {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: space-between; /* Distribui os itens com espaçamento entre eles */
+}
+
+/* Estiliza cada item individual no painel de jogos */
+.dashboard__items__item {
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: flex-start; /* Alinha os itens no início do contêiner */
+
+    font-family: 'Inter', sans-serif; /* Define a fonte dos itens */
+}
+
+/* Estiliza as imagens dos itens do painel */
+.dashboard__item__img {
+    box-shadow: 0px 0px 24px 8px rgba(24, 118, 232, 0.25); /* Adiciona sombra ao redor da imagem */
+
+    margin-bottom: 1rem; /* Adiciona margem inferior à imagem */
+}
+
+/* Estiliza a imagem do item quando ele está alugado */
+.dashboard__item__img--rented {
+    position: relative; /* Define a posição como relativa para posicionar o pseudo-elemento */
+}
+
+/* Adiciona um efeito de sobreposição na imagem do item alugado */
+.dashboard__item__img--rented::after {
+    content: ""; /* Cria um pseudo-elemento vazio */
+    display: block; /* Exibe o pseudo-elemento como um bloco */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+
+    position: absolute; /* Posiciona o pseudo-elemento de forma absoluta */
+    top: 0; /* Alinha o pseudo-elemento no topo */
+
+    background-color: rgba(1, 8, 14, 0.4); /* Define uma cor de fundo escura com transparência */
+}
+
+/* Estiliza o nome do item */
+.dashboard__item__name {
+    font-weight: 600; /* Define o peso da fonte como 600 */
+    font-size: 2rem; /* Define o tamanho da fonte */
+
+    margin-bottom: 2.5rem; /* Adiciona uma margem inferior */
+}
+
+/* Estiliza os botões dos itens */
+.dashboard__item__button {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centraliza o conteúdo do botão */
+    
+    font-weight: 700; /* Define o peso da fonte como 700 (negrito) */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+
+    padding: 1rem 1.5rem; /* Adiciona padding interno ao botão */
+    min-width: 13rem; /* Define a largura mínima do botão */
+
+    border-radius: 1rem; /* Adiciona bordas arredondadas ao botão */
+
+    background-color: #1875E8; /* Define o fundo do botão como azul */
+}
+
+/* Estiliza o botão de devolver item */
+.dashboard__item__button--return {
+    background-color: #01080E; /* Define o fundo do botão de devolver como escuro */
+}
+
+/* Estiliza a imagem de hachuras no final da página */
+.hachuras {
+    margin-top: 1.5rem; /* Adiciona margem superior */
+    margin-right: 33px; /* Adiciona margem direita */
+    align-self: flex-end; /* Alinha a imagem à direita */
+}
