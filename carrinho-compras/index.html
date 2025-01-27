@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Define o tipo de documento como HTML5 e especifica o idioma da página como inglês -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Garante que a página seja responsiva em dispositivos móveis ajustando a largura da viewport -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Otimiza o carregamento de fontes ao estabelecer conexões antecipadas com os servidores do Google Fonts -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Importa duas famílias de fontes ('Chakra Petch' e 'Inter') com diferentes pesos -->
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Vincula a página ao arquivo de estilo externo para aplicar a formatação CSS -->
+
+  <title>Carrinho de compras</title>
+  <!-- Define o título da página que aparece na aba do navegador -->
+</head>
+
+<body>
+  <main class="conteudo-principal">
+    <!-- Contêiner principal do conteúdo da página -->
+    
+    <div class="grafismo-azul"></div>
+    <!-- Elemento decorativo para o fundo, estilizado via CSS -->
+
+    <section class="adicionar-produto">
+      <!-- Seção onde os usuários podem adicionar produtos ao carrinho -->
+      
+      <h1 class="titulo">
+        Carrinho de <span class="texto-azul">compras</span>
+        <!-- Título principal da página com parte do texto destacado em azul -->
+      </h1>
+
+      <form class="formulario">
+        <!-- Formulário para adicionar produtos ao carrinho -->
+        
+        <label class="campo-grupo">
+          <!-- Agrupa o rótulo e o campo de entrada do produto -->
+          
+          <span class="texto-medio-azul">Produto</span>
+          <!-- Rótulo indicando que o campo abaixo se refere ao produto -->
+          
+          <select class="produto-input" name="produto" id="produto">
+            <!-- Campo de seleção para escolher um produto -->
+            
+            <option value="Fone de ouvido - R$100">Fone de ouvido - R$100</option>
+            <!-- Opção disponível no menu suspenso -->
+            
+            <option value="Celular - R$1400">Celular - R$1400</option>
+            <!-- Outra opção disponível -->
+            
+            <option value="Oculus VR - R$5000">Oculus VR - R$5000</option>
+            <!-- Terceira opção disponível -->
+          </select>
+        </label>
+
+        <section class="parte-inferior">
+          <!-- Contêiner para organizar a parte inferior do formulário -->
+          
+          <label class="campo-grupo">
+            <!-- Agrupa o rótulo e o campo de entrada para a quantidade -->
+            
+            <span class="texto-medio-azul">Qtde.</span>
+            <!-- Rótulo indicando que o campo abaixo se refere à quantidade -->
+            
+            <input class="quantidade-input" id="quantidade" type="number" placeholder="100">
+            <!-- Campo de entrada para digitar a quantidade do produto -->
+          </label>
+
+          <section class="botoes-wrapper">
+            <!-- Contêiner para os botões do formulário -->
+            
+            <button onclick="adicionar()" type="button" class="botao-form botao-adicionar">Adicionar</button>
+            <!-- Botão para adicionar o produto ao carrinho, com a função 'adicionar()' vinculada -->
+            
+            <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
+            <!-- Botão para limpar os campos do formulário, com a função 'limpar()' vinculada -->
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <section class="carrinho">
+      <!-- Seção onde são exibidos os produtos no carrinho -->
+      
+      <img src="./assets/carrinho-cinza.svg" alt="Imagem de um carrinho de compras cinza">
+      <!-- Imagem decorativa de um carrinho de compras -->
+
+      <div class="titulo-wrapper">
+        <!-- Contêiner para organizar o título do carrinho e o ícone -->
+        
+        <img src="./assets/icone-carrinho.svg" alt="ícone de carrinho">
+        <!-- Ícone decorativo ao lado do título -->
+        
+        <h2 class="carrinho__titulo">Produtos no carrinho</h2>
+        <!-- Subtítulo indicando os produtos no carrinho -->
+      </div>
+
+      <section class="carrinho__produtos" id="lista-produtos">
+        <!-- Lista de produtos adicionados ao carrinho -->
+        
+        <section class="carrinho__produtos__produto">
+          <!-- Produto específico na lista -->
+          
+          <span class="texto-azul">1x</span> Celular <span class="texto-azul">R$1400</span>
+          <!-- Exibe a quantidade, o nome e o preço do produto -->
+        </section>
+      </section>
+
+      <div class="divisoria"></div>
+      <!-- Linha divisória entre os produtos e o total -->
+
+      <p class="carrinho__total">
+        <!-- Exibição do total de itens no carrinho -->
+        
+        Total: <span class="texto-azul" id="valor-total">R$1400</span>
+        <!-- Total destacado em azul -->
+      </p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <!-- Link para o arquivo de script externo com a lógica da aplicação -->
+</body>
+
+</html>

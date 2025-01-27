@@ -1,0 +1,270 @@
+/* Reseta as margens e paddings padrão do navegador, e define o modelo de caixa como border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página */
+body {
+  min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+  height: auto; /* Permite que o body cresça conforme o conteúdo */
+  background: linear-gradient(to bottom,
+      #01080E 10%, /* Cor escura no início do gradiente */
+      #FFF 10%,   /* Cor branca a partir de 10% */
+      #FFF 90%,   /* Cor branca até 90% */
+      #01080E 90%); /* Cor escura no final do gradiente */
+  padding: 7vh 8vw 5vh; /* Define um espaçamento interno com base na viewport */
+  font-family: 'Inter', sans-serif; /* Define a fonte padrão */
+  font-size: 16px; /* Define o tamanho da fonte padrão */
+}
+
+/* Remove o estilo padrão dos botões */
+button {
+  background: inherit;
+  color: inherit;
+  border: 0;
+}
+
+/* Remove o estilo padrão do select */
+select {
+  appearance: none;
+}
+
+/* Remove as setas de incremento e decremento dos inputs do tipo número no Chrome */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setas de incremento e decremento dos inputs do tipo número em outros navegadores */
+input[type="number"] {
+    appearance: textfield;
+}
+
+/* Estilo para textos médios na cor azul */
+.texto-medio-azul {
+  color: var(--Light-Blue, #1875E8); /* Define a cor do texto, usando uma variável CSS */
+  font-size: 1.5rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-weight: 600; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para o conteúdo principal da página */
+.conteudo-principal {
+  filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40)); /* Aplica um efeito de sombra */
+  min-height: 100%; /* Garante que o conteúdo principal tenha pelo menos a altura do pai */
+  padding: 5rem 6.5rem; /* Define o espaçamento interno */
+  
+  display: grid; /* Usa o sistema de grid para o layout */
+  grid-template-columns: 1.375fr 1fr; /* Define duas colunas com tamanhos flexíveis */
+  column-gap: 5rem; /* Define o espaçamento entre as colunas */
+
+  background: white url('./assets/oculos.png') no-repeat bottom left; /* Define um fundo branco com uma imagem */
+  background-size: auto 40%; /* Ajusta o tamanho da imagem de fundo */
+
+  position: relative; /* Define a posição como relativa para que elementos filhos possam ser posicionados de forma absoluta dentro dele */
+  background-position: left bottom -40px; /* Ajusta a posição da imagem de fundo */
+}
+
+/* Estilos para o grafismo azul */
+.grafismo-azul {
+  position: absolute; /* Permite posicionar o elemento de forma absoluta */
+  width: 31.9375rem; /* Define a largura */
+  height: 2.0625rem; /* Define a altura */
+  background-image: url('./assets/grafismo-azul.svg'); /* Define a imagem de fundo */
+  top: -1rem; /* Define a posição no topo */
+}
+
+/* Estilos para o título */
+.titulo {
+  font-family: 'Chakra Petch', sans-serif; /* Define a fonte */
+  font-size: 5rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: 100%; /* Define a altura da linha */
+  margin-bottom: 2.5rem; /* Define a margem inferior */
+}
+
+/* Estilo para textos na cor azul */
+.texto-azul {
+  color: #1875E8; /* Define a cor do texto */
+}
+
+/* Estilos para o formulário */
+.formulario {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  align-items: flex-start; /* Alinha os itens no início do eixo cruzado */
+  gap: 1.5rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para os grupos de campos do formulário */
+.formulario .campo-grupo {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  align-items: flex-start; /* Alinha os itens no início do eixo cruzado */
+  gap: 1rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para os inputs de produto */
+.produto-input {
+  width: 24.75rem; /* Define a largura */
+  height: 3.5rem; /* Define a altura */
+  padding: 1rem; /* Define o espaçamento interno */
+  border-radius: 0.5rem; /* Define o raio da borda */
+  border: 1px solid var(--Light-Blue, #1875E8); /* Define a borda */
+
+  color: var(--Void, #01080E); /* Define a cor do texto */
+  font-family: Inter; /* Define a fonte */
+  font-size: 1.3125rem; /* Define o tamanho da fonte */
+  font-style: italic; /* Define o estilo da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+  
+  background: url('./assets/arrow-down.svg') no-repeat right 1rem top 50%; /* Define uma seta como imagem de fundo */
+}
+
+/* Estilos para o dropdown */
+.dropdown {
+  width: 3.375rem; /* Define a largura */
+  height: 3.5rem; /* Define a altura */
+  padding: 1rem; /* Define o espaçamento interno */
+  justify-content: center; /* Centraliza os itens no eixo principal */
+  align-items: center; /* Centraliza os itens no eixo cruzado */
+  gap: 0.625rem; /* Define o espaçamento entre os itens */
+  border-radius: 0rem 0.5rem 0.5rem 0rem; /* Define o raio da borda */
+  border: 1px solid var(--Light-Blue, #1875E8); /* Define a borda */
+  cursor: pointer; /* Define o cursor como pointer */
+}
+
+/* Estilos para a parte inferior do formulário */
+.formulario > .parte-inferior {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  align-items: flex-end; /* Alinha os itens no final do eixo cruzado */
+  gap: 2rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para os inputs de quantidade */
+.quantidade-input {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  height: 3.5rem; /* Define a altura */
+  padding: 1rem; /* Define o espaçamento interno */
+  width: 4.5rem; /* Define a largura */
+  border-radius: 0.5rem; /* Define o raio da borda */
+  border: 1px solid var(--Light-Blue, #1875E8); /* Define a borda */
+
+  color: var(--Void, #01080E); /* Define a cor do texto */
+  font-family: Inter; /* Define a fonte */
+  font-size: 1.3125rem; /* Define o tamanho da fonte */
+  font-style: italic; /* Define o estilo da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para o wrapper dos botões */
+.botoes-wrapper {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  align-items: flex-end; /* Alinha os itens no final do eixo cruzado */
+  gap: 1rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para os botões do formulário */
+.botao-form {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  justify-content: center; /* Centraliza os itens no eixo principal */
+  align-items: center; /* Centraliza os itens no eixo cruzado */
+  width: 13rem; /* Define a largura */
+  height: 3.25rem; /* Define a altura */
+  padding: 1rem 1.5rem; /* Define o espaçamento interno */
+  gap: 0.625rem; /* Define o espaçamento entre os itens */
+  border-radius: 1rem; /* Define o raio da borda */
+  cursor: pointer; /* Define o cursor como pointer */
+}
+
+/* Estilos para o botão adicionar */
+.botao-adicionar {
+  background: var(--Light-Blue, #1875E8); /* Define a cor de fundo */
+  box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.50); /* Aplica uma sombra */
+
+  color: var(--Branco, #FFF); /* Define a cor do texto */
+  font-size: 1.5rem; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: normal; /* Define a altura da linha como normal */
+}
+
+/* Estilos para o botão limpar */
+.botao-limpar {
+  border-radius: 1rem; /* Define o raio da borda */
+  background: var(--Void, #01080E); /* Define a cor de fundo */
+  box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50); /* Aplica uma sombra */
+
+  color: var(--Branco, #FFF); /* Define a cor do texto */
+  font-size: 1.5rem; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: normal; /* Define a altura da linha como normal */
+}
+
+/* Estilos para o carrinho */
+.carrinho {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  width: 24rem; /* Define a largura */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  align-items: flex-start; /* Alinha os itens no início do eixo cruzado */
+  gap: 2rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para o wrapper do título do carrinho */
+.titulo-wrapper {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  align-items: center; /* Alinha os itens no centro do eixo cruzado */
+  gap: 1rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para o título do carrinho */
+.carrinho__titulo {
+  color: var(--Light-Blue, #1875E8); /* Define a cor do texto */
+  font-family: Inter; /* Define a fonte */
+  font-size: 1.5rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-weight: 600; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para a lista de produtos do carrinho */
+.carrinho__produtos {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  align-items: flex-start; /* Alinha os itens no início do eixo cruzado */
+  gap: 1rem; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para cada produto do carrinho */
+.carrinho__produtos__produto {
+  font-size: 1.3125rem; /* Define o tamanho da fonte */
+  font-style: italic; /* Define o estilo da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para a divisória */
+.divisoria {
+  width: 24rem; /* Define a largura */
+  height: 0.0625rem; /* Define a altura */
+  background: #000; /* Define a cor de fundo */
+}
+
+/* Estilos para o total do carrinho */
+.carrinho__total {
+  font-size: 2.25rem; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para o espaçamento inferior da seção de adicionar produto*/
+.adicionar-produto {
+  padding-bottom: 180px; /* Define um espaçamento inferior para evitar que a imagem de fundo sobreponha o conteúdo */
+}
