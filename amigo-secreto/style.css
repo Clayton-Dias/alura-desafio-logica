@@ -1,0 +1,229 @@
+/* Estilos para o body da página */
+body {
+  background: #000; /* Define o fundo preto */
+  min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
+  position: relative; /* Permite posicionar elementos de forma absoluta dentro do body */
+}
+
+/* Estilos para o detalhe de fundo */
+.background__detail {
+  background-color: #00f4bf; /* Define a cor de fundo como um verde azulado */
+  height: calc(100% - 389px); /* Define a altura, calculando o espaço restante após subtrair 389px da altura total */
+  left: 0; /* Posiciona o elemento na esquerda */
+  position: absolute; /* Permite posicionar o elemento de forma absoluta */
+  right: 0; /* Posiciona o elemento na direita */
+  top: 195px; /* Define o posicionamento no topo */
+  z-index: 0; /* Define o z-index para que fique atrás de outros elementos */
+}
+
+/* Estilos para o botão */
+.button {
+  align-items: center; /* Alinha os itens no centro do eixo cruzado */
+  background-color: transparent; /* Define o fundo como transparente */
+  border: none; /* Remove a borda */
+  border-radius: 16px; /* Define o raio da borda */
+  color: #fff; /* Define a cor do texto como branco */
+  cursor: pointer; /* Define o cursor como pointer */
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  font-size: 24px; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  gap: 10px; /* Define o espaçamento entre os itens */
+  height: 52px; /* Define a altura */
+  justify-content: center; /* Alinha os itens no centro do eixo principal */
+  line-height: normal; /* Define a altura da linha como normal */
+  padding: 16px 24px; /* Define o espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  width: 208px; /* Define a largura */
+}
+
+/* Estilos para o container principal do conteúdo */
+.content {
+  background-color: #000; /* Define o fundo preto */
+  border: 1px solid #1875e8; /* Define a borda */
+  filter: drop-shadow(0px 0px 30px #1875e8); /* Aplica uma sombra */
+  height: 871px; /* Define a altura */
+  left: 50%; /* Posiciona o elemento no centro horizontal */
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
+  position: absolute; /* Permite posicionar o elemento de forma absoluta */
+  top: 50%; /* Posiciona o elemento no centro vertical */
+  transform: translate(-50%, -50%); /* Centraliza o elemento no centro da tela */
+  width: 75%; /* Define a largura como 75% do container pai */
+  z-index: 1; /* Define o z-index para que fique acima do detalhe de fundo */
+}
+
+/* Estilos para o retângulo do canto do conteúdo */
+.content__corner-rectangle {
+  background-color: #00f4bf; /* Define a cor de fundo */
+  bottom: -15px; /* Posiciona o elemento na parte inferior */
+  clip-path: polygon(0% 100%, 0% 50%, 4% 0%, 100% 0%, 100% 50%, 96% 100%); /* Define o formato do retângulo usando clip-path */
+  height: 33px; /* Define a altura */
+  position: absolute; /* Permite posicionar o elemento de forma absoluta */
+  right: 32px; /* Posiciona o elemento na direita */
+  width: 511px; /* Define a largura */
+  z-index: 3; /* Define o z-index para que fique acima do conteúdo */
+}
+
+/* Estilos para o conteúdo principal dentro do container */
+.content__main {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  gap: 80px; /* Define o espaçamento entre os itens */
+  justify-content: start; /* Alinha os itens no início do eixo principal */
+  padding: 100px; /* Define o espaçamento interno */
+}
+
+/* Estilos para o container de amigos */
+.friends__container {
+  align-items: center; /* Alinha os itens no centro do eixo cruzado */
+  border: 1px solid #1875e8; /* Define a borda */
+  border-radius: 8px; /* Define o raio da borda */
+  color: #fff; /* Define a cor do texto como branco */
+  display: flex; /* Usa o modelo flexbox para o layout */
+  font-size: 21px; /* Define o tamanho da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  justify-content: center; /* Alinha os itens no centro do eixo principal */
+  line-height: 160%; /* Define a altura da linha */
+  margin-top: 1rem; /* Define a margem superior */
+  padding: 24px; /* Define o espaçamento interno */
+  width: 453px; /* Define a largura */
+}
+
+/* Estilos para o texto dentro do container de amigos */
+.friends__container > p {
+  color: #fff; /* Define a cor do texto como branco */
+  font-size: 21px; /* Define o tamanho da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  line-height: 160%; /* Define a altura da linha */
+}
+
+/* Estilos para o título da seção de amigos */
+.friends__title {
+  color: #1875e8; /* Define a cor do texto */
+  font-size: 24px; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para o formulário */
+.form {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  font-family: Inter; /* Define a fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+}
+
+/* Estilos para o container dos botões do formulário */
+.form__buttons {
+  align-items: center; /* Alinha os itens no centro do eixo cruzado */
+  display: flex; /* Usa o modelo flexbox para o layout */
+  gap: 32px; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para os inputs do formulário */
+.form__input {
+  align-items: center; /* Alinha os itens no centro do eixo cruzado */
+  background-color: transparent; /* Define o fundo como transparente */
+  border: 1px solid #1875e8; /* Define a borda */
+  border-radius: 8px; /* Define o raio da borda */
+  color: #fff; /* Define a cor do texto como branco */
+  display: flex; /* Usa o modelo flexbox para o layout */
+  font-size: 21px; /* Define o tamanho da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  height: 56px; /* Define a altura */
+  margin-bottom: 32px; /* Define a margem inferior */
+  outline: none; /* Remove o outline */
+  padding: 8px 16px; /* Define o espaçamento interno */
+  width: 517px; /* Define a largura */
+}
+
+/* Estilos para o placeholder dos inputs do formulário */
+.form__input::placeholder {
+  color: #fff; /* Define a cor do placeholder */
+  font-size: 21px; /* Define o tamanho da fonte do placeholder */
+}
+
+/* Estilos para as labels do formulário */
+.form__label {
+  color: #1875e8; /* Define a cor do texto */
+  font-size: 24px; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+  margin-bottom: 16px; /* Define a margem inferior */
+}
+
+/* Estilos para o link do formulário */
+.form__link {
+  color: #00f4bf; /* Define a cor do texto */
+  cursor: pointer; /* Define o cursor como pointer */
+  font-size: 24px; /* Define o tamanho da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+  text-align: center; /* Centraliza o texto */
+  text-decoration-line: underline; /* Define o sublinhado */
+}
+
+/* Estilos para a imagem da página */
+.page__image {
+  position: absolute; /* Permite posicionar o elemento de forma absoluta */
+  right: 0; /* Posiciona o elemento na direita */
+  top: 76px; /* Define o posicionamento no topo */
+  z-index: 2; /* Define o z-index para que fique acima do conteúdo e abaixo do retângulo do canto */
+  pointer-events: none; /* Impede que o elemento capture eventos de mouse */
+}
+
+/* Estilos para o container do sorteio */
+.prizeDraw__container {
+  color: #fff; /* Define a cor do texto */
+  font-size: 21px; /* Define o tamanho da fonte */
+  font-style: italic; /* Define o estilo da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  height: 199px; /* Define a altura */
+  line-height: 160%; /* Define a altura da linha */
+  margin-top: 1rem; /* Define a margem superior */
+}
+
+/* Estilos para o título do sorteio */
+.prizeDraw__title {
+  color: #00f4bf; /* Define a cor do texto */
+  font-size: 24px; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: 110%; /* Define a altura da linha */
+}
+
+/* Estilos para o botão primário */
+.primary {
+  background-color: #1875e8; /* Define a cor de fundo */
+  color: #fff; /* Define a cor do texto */
+}
+
+/* Estilos para a seção de resultados */
+.section--results {
+  align-items: start; /* Alinha os itens no início do eixo cruzado */
+  display: flex; /* Usa o modelo flexbox para o layout */
+  font-family: Inter; /* Define a fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  gap: 48px; /* Define o espaçamento entre os itens */
+}
+
+/* Estilos para o título da seção */
+.section__title {
+  color: #fff; /* Define a cor do texto */
+  font-family: Chakra Petch; /* Define a fonte */
+  font-size: 88px; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-weight: 700; /* Define a espessura da fonte */
+  line-height: 80%; /* Define a altura da linha */
+  margin: 0 0 80px 0; /* Define a margem inferior */
+}
+
+/* Estilos para o span dentro do título da seção */
+.section__title > span {
+  color: #1875e8; /* Define a cor do texto */
+}
+
+/* Estilos para o botão secundário */
+.secondary {
+  background-color: #fff; /* Define a cor de fundo */
+  color: #1875e8; /* Define a cor do texto */
+}
