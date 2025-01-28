@@ -1,0 +1,32 @@
+/* Remove margens e preenchimentos padrão e define box-sizing para border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte para os títulos h1, h2 e h3 */
+h1,
+h2,
+h3 {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Remove os marcadores de lista padrão */
+ul {
+    list-style-type: none;
+}
+
+/* Remove os botões de incremento e decremento dos campos de número no Webkit (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove a aparência padrão dos campos de número no Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Remove a aparência padrão dos campos de número em todos os navegadores */
+    appearance: none;
+}

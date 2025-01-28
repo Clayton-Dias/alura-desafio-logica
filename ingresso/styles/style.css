@@ -1,0 +1,155 @@
+/* Estilo do corpo da página */
+body {
+    width: 1440px; /* Largura máxima da página */
+    height: 100vh; /* Altura total da janela de visualização */
+    background: linear-gradient(180deg, rgba(1, 8, 14, 1) 1%, rgba(4, 24, 50, 1) 39%, rgba(1, 8, 14, 1) 88%);
+    /* Fundo com gradiente vertical (de preto a azul escuro e de volta a preto) */
+    margin: 5% auto; /* Centraliza verticalmente e define uma margem em torno */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 1200px; /* Largura máxima do cabeçalho */
+    margin: 2rem auto; /* Espaço em cima/baixo e centralização horizontal */
+}
+
+header .logo {
+    width: 196.8px; /* Largura da logo */
+    padding-left: 2rem; /* Espaçamento interno à esquerda */
+}
+
+/* Estilo principal do container */
+main.container {
+    width: 1200px; /* Largura máxima */
+    height: auto; /* Altura se ajusta ao conteúdo */
+    border: 2px solid #00F4BF; /* Borda verde fluorescente */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 4.5rem 6.38rem; /* Espaçamento interno */
+    background-image: url('../assets/PNG/Imagem\ com\ borda.png'); /* Fundo com imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir o espaço */
+    position: relative; /* Define o contexto para posicionamento dos elementos filhos */
+}
+
+/* Estilo do elemento gráfico verde no topo */
+main.container .grafismo {
+    background: url('../assets/SVG/Grafismo\ verde.svg'); /* Imagem de fundo do grafismo */
+    width: 31.9375rem; /* Largura do grafismo */
+    height: 2.0625rem; /* Altura do grafismo */
+    position: absolute; /* Posicionamento absoluto em relação ao container */
+    top: -19px; /* Move o elemento para cima */
+    left: -2px; /* Move o elemento levemente para a esquerda */
+}
+
+/* Estilo do título principal */
+main.container h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Fonte personalizada */
+    font-size: 5rem; /* Tamanho grande do texto */
+    line-height: 110%; /* Altura das linhas */
+}
+
+/* Estilo do texto destacado no título */
+main.container h1 span {
+    color: #1875E8; /* Cor azul para destaque */
+}
+
+/* Estilo do formulário */
+form {
+    display: flex; /* Exibe os elementos em linha */
+    align-items: flex-end; /* Alinha os itens ao final na vertical */
+    gap: 2rem; /* Espaçamento entre os elementos */
+    margin: 2.5rem 0; /* Espaçamento externo em cima/baixo */
+}
+
+/* Estilo do grupo de entrada (input/select) */
+form .input-group {
+    display: flex; /* Exibe os elementos em coluna */
+    flex-direction: column; /* Direção da exibição */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: .5rem; /* Espaçamento entre os elementos */
+    font-family: 'Inter', sans-serif; /* Fonte personalizada */
+    font-weight: 700; /* Fonte em negrito */
+    font-size: 1.5rem; /* Tamanho do texto */
+}
+
+/* Estilo do input e do select */
+form .input-group select,
+form .input-group input {
+    background: none; /* Remove a cor de fundo padrão */
+    color: white; /* Define a cor do texto como branco */
+    border: 1px solid #00F4BF; /* Borda verde fluorescente */
+    border-radius: .5rem; /* Arredonda os cantos */
+    height: 3.5rem; /* Altura dos campos */
+    padding: .5rem 1rem; /* Espaçamento interno */
+    font-size: 1.3rem; /* Tamanho do texto */
+}
+
+/* Estilo específico do select */
+form .input-group select {
+    width: 24.75rem; /* Largura do campo select */
+    appearance: none; /* Remove o estilo padrão do select */
+    background: url('../assets/PNG/Arrow\ down.png') no-repeat right 1rem top 50%; 
+    /* Adiciona um ícone personalizado à direita */
+    color: black; /* Cor do texto do select */
+    background-color: white; /* Cor de fundo do select */
+}
+
+/* Estilo específico do input */
+form .input-group input {
+    width: 60px; /* Largura do campo */
+}
+
+/* Placeholder centralizado no input */
+form .input-group input::placeholder {
+    text-align: center;
+}
+
+/* Estilo do botão */
+form button {
+    color: white; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do texto */
+    border: none; /* Remove borda padrão */
+    background-color: #1875E8; /* Fundo azul */
+    padding: 1rem 1.5rem; /* Espaçamento interno */
+    border-radius: 1rem; /* Cantos arredondados */
+    width: 13rem; /* Largura fixa */
+    box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.50); /* Sombra azul */
+    cursor: pointer; /* Altera o cursor para "mão" ao passar */
+}
+
+/* Margem para a imagem das hachuras */
+.hachuras {
+    margin: 5.19rem 0;
+}
+
+/* Seção de quantidade disponível */
+.container section {
+    display: flex; /* Exibe itens em linha */
+    justify-content: space-between; /* Espaço igual entre os elementos */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    align-self: stretch; /* Estica o elemento para ocupar todo o espaço disponível */
+}
+
+/* Estilo do subtítulo dentro da seção */
+.container section h2 {
+    font-size: 2rem; /* Tamanho do texto */
+}
+
+/* Estilo da lista */
+.container section ul {
+    display: flex; /* Exibe os itens em coluna */
+    flex-direction: column; /* Direção da exibição */
+    align-items: flex-end; /* Alinha os itens à direita */
+    gap: 1rem; /* Espaçamento entre os itens */
+    font-size: 1.5rem; /* Tamanho do texto */
+    font-family: 'Inter', sans-serif; /* Fonte personalizada */
+    font-weight: 400; /* Peso da fonte regular */
+}
+
+/* Estilo do texto destacado nos itens da lista */
+.container section ul li span {
+    color: #00F4BF; /* Cor verde fluorescente */
+    font-style: italic; /* Texto em itálico */
+    font-size: 2rem; /* Tamanho maior do texto */
+    padding-left: 1.5rem; /* Espaçamento interno à esquerda */
+}

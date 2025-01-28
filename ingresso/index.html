@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Definindo a codificação de caracteres como UTF-8 para garantir que caracteres especiais (acentos, etc) sejam exibidos corretamente -->
+    <meta charset="UTF-8">
+    
+    <!-- Definindo o viewport para tornar o site responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Conexão com os servidores do Google Fonts para carregamento de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Carregando as fontes Chakra Petch e Inter do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Carregando arquivos de estilo externos, incluindo reset CSS e o estilo principal do site -->
+    <link rel="stylesheet" href="./styles/_reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>e-Ticket</title>
+</head>
+
+<body>
+    <!-- Cabeçalho com o logotipo do site -->
+    <header>
+        <img class="logo" src="./assets/PNG/Logo e-tricket.png" alt="Logo">
+    </header>
+
+    <main class="container">
+        <!-- Área de gráficos de fundo ou decoração -->
+        <div class="grafismo"></div>
+
+        <!-- Título principal da página -->
+        <h1>Compre seu <span>ingresso</span></h1>
+
+        <!-- Formulário de compra de ingressos -->
+        <form action="">
+            <!-- Seleção de tipo de ingresso (inferior, superior, pista) -->
+            <label class="input-group">
+                Escolha o tipo
+                <select name="tipo-ingresso" id="tipo-ingresso">
+                    <option value="inferior">Cadeira inferior</option>
+                    <option value="superior">Cadeira superior</option>
+                    <option value="pista">Pista</option>
+                </select>
+            </label>
+
+            <!-- Campo de entrada para quantidade de ingressos -->
+            <label class="input-group">Qtde.
+                <input type="number" id="qtd" placeholder="00" min="1" max="10">
+            </label>
+
+            <!-- Botão para comprar ingressos -->
+            <button onclick="comprar()" type="button">Comprar</button>
+        </form>
+
+        <!-- Imagem decorativa ou de marca (hachuras) -->
+        <img class="hachuras" src="./assets/SVG/Hachuras.svg" alt="">
+
+        <!-- Seção para exibir a quantidade de ingressos disponíveis -->
+        <section>
+            <h2>Quantidade disponível</h2>
+
+            <!-- Lista de ingressos disponíveis -->
+            <ul class="lista">
+                <!-- Itens da lista com tipo de ingresso e quantidade disponível -->
+                <li>Pista<span id="qtd-pista">100</span></li>
+                <li>Cadeira superior<span id="qtd-superior">200</span></li>
+                <li>Cadeira inferior<span id="qtd-inferior">400</span></li>
+            </ul>
+
+            <!-- Imagem de ingresso (decorativa ou ilustrativa) -->
+            <img src="./assets/Ingresso.svg" alt="">
+        </section>
+    </main>
+
+    <!-- Inclusão do script JavaScript que controla a funcionalidade da página -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
