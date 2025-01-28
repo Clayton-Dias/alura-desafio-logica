@@ -1,6 +1,7 @@
 # Desafios de Lógica de Programação - Alura
 
-Este repositório contém soluções para os desafios de lógica de programação propostos pela **Alura**. Cada desafio foi desenvolvido para aprimorar habilidades em lógica, algoritmos e manipulação de estruturas de dados.
+Este repositório contém soluções para os desafios de lógica de programação propostos pela **Alura**. 
+Cada desafio foi desenvolvido para aprimorar habilidades em lógica, algoritmos e manipulação de estruturas de dados.
 
 ---
 
